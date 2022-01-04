@@ -1,4 +1,4 @@
-import { white } from "../../colors/colors";
+import { white } from "../../colors/colors.js";
 import styled from "styled-components";
 import mediaQueries from "../../constants/mediaQueries";
 export const Container = styled.div`
