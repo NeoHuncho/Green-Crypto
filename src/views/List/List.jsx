@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import binance from "../../assets/affiliate_links/binance.png";
 import coinbase from "../../assets/affiliate_links/coinbase.jpg";
 import { updateData } from "../../data/data";
@@ -30,7 +30,7 @@ const ListItem = ({ logo, code, name, kwh, gCO2 }) => {
 };
 
 const List = () => {
-  const [country, setCountry] = useState("France");
+  const [country] = useState("France");
   //use effect to be implemented
 
   updateData("country", country);
