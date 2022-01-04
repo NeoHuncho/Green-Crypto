@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import binance from "../../assets/affiliate_links/binance.png";
 import coinbase from "../../assets/affiliate_links/coinbase.jpg";
 import { updateData } from "../../data/data";
@@ -17,10 +17,7 @@ const ListItem = ({ logo, code, name, kwh, gCO2 }) => {
   return (
     <ListItemContainer>
       <Logo src={logo}></Logo>
-      <NameContainer>
-        <Name>{`${name} ${code ? "(" + code + ")" : ""}`}</Name>
-      </NameContainer>
-
+      <Name>{`${name} ${code ? "(" + code + ")" : ""}`}</Name>
       <Value>{kwh}</Value>
       <Value>{gCO2}</Value>
       <Link src={binance} />

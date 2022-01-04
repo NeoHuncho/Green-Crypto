@@ -14,7 +14,6 @@ export const ListItemContainer = styled.div`
   display: grid;
   grid-template-columns: 5% 22% 40% 20% 5% 5%;
   grid-template-rows: 100%;
-  grid-template-areas: ". name . . .";
   gap: 0px 0px;
   width: 100%;
   height: 60px;
@@ -23,13 +22,11 @@ export const ListItemContainer = styled.div`
   padding: 1%;
   @media ${mediaQueries.mobile} {
     margin-bottom: 2vh;
-    grid-template-columns: 13% 22% 20% 20% 20%;
+    grid-template-columns: 13% 22% 20% 20% 10% 10%;
   }
 `;
 
-export const NameContainer = styled.div`
-  grid-area: name;
-`;
+
 
 export const Name = styled.text`
   font-size: 2vw;
