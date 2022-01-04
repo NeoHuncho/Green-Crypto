@@ -10,7 +10,6 @@ import {
   ListItemContainer,
   Logo,
   Link,
-  NameContainer,
 } from "./List_Styles";
 
 const ListItem = ({ logo, code, name, kwh, gCO2 }) => {
