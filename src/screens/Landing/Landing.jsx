@@ -1,5 +1,5 @@
 import React from "react";
-import { SubTitle, Title, Container } from "./Landing_styles";
+import { SubTitle, Title, Container } from "./Landing_Styles.js";
 
 const Landing = () => {
   return (
