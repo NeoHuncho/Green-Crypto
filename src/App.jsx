@@ -1,23 +1,26 @@
 import { useEffect, useState } from "react";
-import { MainContainer } from "./App_Styles.js";
-import { fetchData } from "./data/data.js";
-import List from "./views/List/List.jsx";
-import Landing from "./views/Landing/Landing.jsx";
+import disableScroll from "disable-scroll";
+import { MainContainer, PlaceHolderContainer } from "./App_styles.js";
+import { fetchData } from "data/data.js";
+import List from "screens/List/List.jsx";
+import Landing from "screens/Landing/Landing.jsx";
 
 const App = () => {
   const [data, setData] = useState(undefined);
   useEffect(() => {
     const getData = async () => {
+      disableScroll.on();
       const res = await fetchData();
-      console.log(11, res);
       setData(res);
+      disableScroll.off();
     };
+  
     getData();
   }, []);
   return (
     <MainContainer>
       <Landing />
-      {data && <List />}
+      {data ? <List /> : <PlaceHolderContainer />}
     </MainContainer>
   );
 };

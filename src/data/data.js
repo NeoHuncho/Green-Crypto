@@ -1,6 +1,6 @@
 import { getDocs, collection } from "firebase/firestore";
-import { db } from "../constants/initFirebase";
-import formatDisplayValue from "../utils/formatDisplayValue";
+import { db } from "constants/initFirebase";
+import formatDisplayValue from "utils/formatDisplayValue";
 
 const data = {};
 
@@ -9,8 +9,10 @@ const fetchData = async () => {
     const crypto_snapshot = await getDocs(collection(db, "crypto_data"));
     const CO2_snapshot = await getDocs(collection(db, "CO2_example_data"));
     const country_snapshot = await getDocs(collection(db, "country_data"));
+    const constants_snapshot = await getDocs(collection(db, "constants"));
     data["list_items"] = {};
     data["countries_data"] = {};
+    data["constants"] = {};
     crypto_snapshot.forEach(
       (crypto) => (data["list_items"][crypto.id] = crypto.data())
     );
@@ -18,12 +20,14 @@ const fetchData = async () => {
     country_snapshot.forEach(
       (country) => (data["countries_data"][country.id] = country.data())
     );
+    constants_snapshot.forEach(
+      (constant) => (data["constants"][constant.id] = constant.data())
+    );
   }
   return data;
 };
 
 const updateData = (type, value) => {
-  console.log("here", data["countries_data"]);
   switch (type) {
     case "country":
       const list_items = [];

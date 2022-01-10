@@ -1,6 +1,6 @@
-import { white } from "../../colors/colors.js";
+import { white } from "colors/colors.js";
 import styled from "styled-components";
-import mediaQueries from "../../constants/mediaQueries";
+import mediaQueries from "constants/mediaQueries";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;

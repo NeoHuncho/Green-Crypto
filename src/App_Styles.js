@@ -5,3 +5,9 @@ export const MainContainer = styled.div`
   width: 100%;
   background-color: ${black};
 `;
+
+export const PlaceHolderContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: ${black};
+`;
