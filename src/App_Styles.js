@@ -4,6 +4,7 @@ export const MainContainer = styled.div`
   overflow: hidden;
   width: 100%;
   background-color: ${black};
+  
 `;
 
 export const PlaceHolderContainer = styled.div`
