@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import disableScroll from "disable-scroll";
-import { MainContainer, PlaceHolderContainer } from "App_styles.js";
+import { MainContainer, PlaceHolderContainer } from "./App_styles.js";
 import { fetchData } from "data/data.js";
 import List from "screens/List/List.jsx";
 import Landing from "screens/Landing/Landing.jsx";
