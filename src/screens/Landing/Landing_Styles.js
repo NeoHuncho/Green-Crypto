@@ -7,6 +7,7 @@ export const Container = styled.div`
   padding-top: 10vh;
   @media ${mediaQueries.mobile} {
     padding-top: 3vh;
+    
   }
 `;
 
