@@ -6,7 +6,7 @@ export const Container = styled(ListItemContainer)`
   padding: 0%;
   padding-top: 1%;
   @media ${mediaQueries.mobile} {
-    grid-template-columns: 20% 15% 15% 24% 25%;
+    grid-template-columns: 18% 15% 15% 27% 25%;
     height: 18px;
   }
 `;

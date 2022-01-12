@@ -40,7 +40,7 @@ marginBottom:0,
     fontWeight: 500,
     marginTop: -5,
     '@media (max-width: 420px)':{
-      fontSize:7,
+      fontSize:6,
     }
   },
   '& .MuiSlider-thumb': {

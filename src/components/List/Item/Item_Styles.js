@@ -13,8 +13,7 @@ export const ListItemContainer = styled.div`
   justify-content: center;
   padding: 1%;
   @media ${mediaQueries.mobile} {
-
-    grid-template-columns: 20% 15% 15% 24% 25%;
+    grid-template-columns: 18% 15% 15% 27% 25%;
   }
 `;
 
@@ -22,7 +21,7 @@ export const ExampleListItemContainer = styled(ListItemContainer)`
   grid-template-columns: 20% 18% 18% 18% 18%;
 
   @media ${mediaQueries.mobile} {
-    grid-template-columns: 20% 15% 15% 24% 25%;
+    grid-template-columns: 18% 15% 15% 27% 25%;
   }
 `;
 
@@ -36,15 +35,18 @@ export const NameContainer = styled.div`
   flex-direction: column;
   padding-left: 1vw;
   justify-content: center;
+  @media ${mediaQueries.mobile} {
+    padding-left: 1.5vw;
+  }
 `;
 
 export const Logo = styled.img`
   height: 45px;
   width: 45px;
   @media ${mediaQueries.mobile} {
-    height: 30px;
-    width: 30px;
-  }
+    height: 23px;
+    width: 23px;
+    margin-left:5px;  }
 `;
 
 export const Title = styled.text`
@@ -100,7 +102,6 @@ export const LinkContainer = styled.div`
   display: flex;
   justify-content: center;
   @media ${mediaQueries.mobile} {
-
   }
 `;
 
@@ -115,6 +116,6 @@ export const Link = styled.img`
     height: 25px;
     width: 25px;
     margin-left: 1.5px;
-  margin-right: 1.5px;
+    margin-right: 1.5px;
   }
 `;
