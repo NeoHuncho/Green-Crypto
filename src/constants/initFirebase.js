@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-initializeApp({
+import { getDatabase } from "firebase/database";
+const app = initializeApp({
   apiKey: "AIzaSyBC5Gj92opgTEuXYk8Bs1nEJn9Ldefx8Lc",
   authDomain: "green-crypto.firebaseapp.com",
   projectId: "green-crypto",
@@ -8,6 +8,8 @@ initializeApp({
   messagingSenderId: "8912097662",
   appId: "1:8912097662:web:b24ac8928ef633a40ba32f",
   measurementId: "G-EDT1XWF6VV",
+  databaseURL:
+    "https://green-crypto-default-rtdb.europe-west1.firebasedatabase.app/",
 });
-const db = getFirestore();
+const db = getDatabase(app);
 export { db };

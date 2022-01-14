@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 
 import { Container, TimeSlider, Value } from "./PriceVariation_styles.ts";
-import { data } from "data/data";
+import labels from "constants/priceVarationLabels";
 
 function PriceVariation({ market_data, currency }) {
   const defaultValue = 1;
-  const labels = data.constants.market_values_labels.array;
   currency = "usd";
 
   const [priceChange, setPriceChange] = useState(
