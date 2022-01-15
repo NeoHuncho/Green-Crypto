@@ -40,11 +40,10 @@ marginBottom:0,
     fontWeight: 500,
     marginTop: -5,
     '@media (max-width: 420px)':{
-      fontSize:6,
+      fontSize:5.5,
     }
   },
   '& .MuiSlider-thumb': {
-
     '&.Mui-active': {
       boxShadow: '0 0 0 10px rgb(25 118 210 / 16%)',
       '@media (max-width: 420px)':{

@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import formatDisplayValue from "utils/formatDisplayValue";
 
-
 const initialState = {};
 
 export const listSlice = createSlice({
@@ -12,7 +11,6 @@ export const listSlice = createSlice({
       state.data = action.payload;
     },
     updateCO2Data: (state, action) => {
-      console.log("called");
       for (const [name, itemData] of Object.entries(state.data)) {
         if (!state.data[name].gCO2) {
           state.data[name].gCO2 = itemData.Wh_per_trans * action.payload;

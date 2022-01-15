@@ -20,7 +20,7 @@ const App = () => {
       const res = await fetchData();
 
       setData(res);
-      disableScroll.off();
+     
     };
     getData();
   }, []);
