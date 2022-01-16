@@ -8,7 +8,7 @@ import List from "screens/List/List.jsx";
 import Landing from "screens/Landing/Landing.jsx";
 import { initListData } from "data/store/slices/list_slice.js";
 import { initCountryData } from "data/store/slices/country_slice.js";
-
+import SEO from "./SEO";
 const App = () => {
   const dispatch = useDispatch();
   const [data, setData] = useState(undefined);
@@ -20,7 +20,6 @@ const App = () => {
       const res = await fetchData();
 
       setData(res);
-     
     };
     getData();
   }, []);
@@ -37,6 +36,7 @@ const App = () => {
 
   return (
     <MainContainer>
+      <SEO />
       <Landing />
       {dispatched ? <List /> : <PlaceHolderContainer />}
     </MainContainer>

@@ -3,12 +3,12 @@ const formatDisplayValue = (type, value) => {
   if (type === "Wh")
     res =
       value < 10
-        ? value.toFixed(2) + " Wh"
+        ? value.toFixed(2)
         : value < 100
-        ? value.toFixed(1) + " Wh"
+        ? value.toFixed(1)
         : value < 1000
-        ? value.toFixed() + " Wh"
-        : (value / 1000).toFixed() + " kWh";
+        ? value.toFixed()
+        : (value / 1000).toFixed();
   else if (type === "gCO2")
     res =
       value < 0.01
