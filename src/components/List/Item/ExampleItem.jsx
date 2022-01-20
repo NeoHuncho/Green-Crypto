@@ -37,7 +37,7 @@ const ExampleItem = ({ logo, name, Wh, gCO2, more_info }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <InfoModal moreInfo={more_info} />
+        <InfoModal moreInfo={more_info} name={name} logo={logo} />
       </Modal>
     </ListItemContainer>
   );

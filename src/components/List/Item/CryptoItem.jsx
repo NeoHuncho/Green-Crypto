@@ -99,7 +99,7 @@ const CryptoItem = ({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <InfoModal moreInfo={more_info} />
+        <InfoModal moreInfo={more_info} name={name} logo={logo} />
       </Modal>
     </ListItemContainer>
   );

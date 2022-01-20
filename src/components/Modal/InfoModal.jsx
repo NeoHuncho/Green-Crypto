@@ -3,12 +3,21 @@ import {
   TextLink,
   SectionTitle,
   SourcesContainer,
+  TitleContainer,
+  Logo,
+  Name,
 } from "./Modal_styes";
-const InfoModal = ({ moreInfo }) => {
+
+const InfoModal = ({ moreInfo, name, logo }) => {
   const sources = moreInfo.sources;
   return (
     <ModalContainer>
+      <TitleContainer>
+        <Name>{name}</Name>
+        <Logo src={logo} />
+      </TitleContainer>
       <SectionTitle>Sources</SectionTitle>
+
       {sources && (
         <SourcesContainer>
           {sources.co2_emissions && (
