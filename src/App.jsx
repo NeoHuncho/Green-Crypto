@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import disableScroll from "disable-scroll";
 
 import { MainContainer, PlaceHolderContainer } from "./App_Styles.js";
@@ -32,7 +32,7 @@ const App = () => {
       dispatch(initCountryData(data.country_data));
       setDispatched(true);
     }
-  }, [data]);
+  }, [data, dispatch]);
 
   return (
     <MainContainer>

@@ -13,7 +13,7 @@ import { PlaceHolderContainer } from "App_Styles";
 
 const List = () => {
   const dispatch = useDispatch();
-  const [country, setCountry] = useState("France");
+  const [country] = useState("France");
   const [initialUpdate, setInitialUpdate] = useState(false);
 
   const list_data = Object.values(useSelector((state) => state.list.data));
@@ -23,7 +23,7 @@ const List = () => {
     dispatch(updateCO2Data(country_data[country].gCO2_per_Wh));
     setInitialUpdate(true);
     disableScroll.off();
-  }, []);
+  }, [country, country_data, dispatch]);
 
   //use effect to be implemented
 
@@ -42,6 +42,7 @@ const List = () => {
                 gCO2={list_item.gCO2_display_value}
                 market_data={list_item.market_data}
                 links={list_item.links}
+                more_info={list_item.more_info}
               />
             );
           else
@@ -51,6 +52,7 @@ const List = () => {
                 Wh={list_item.Wh_display_value}
                 logo={list_item.logo}
                 gCO2={list_item.gCO2_display_value}
+                more_info={list_item.more_info}
               />
             );
         })

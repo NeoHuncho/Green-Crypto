@@ -4,22 +4,15 @@ import mediaQueries from "constants/mediaQueries";
 
 export const ListItemContainer = styled.div`
   display: grid;
-  grid-template-columns: 20% 18% 18% 18% 18%;
+  grid-template-columns: 18% 18% 18% 18% 18% 8%;
+  grid-template-areas: ". . . . . more_info";
   grid-template-rows: 100%;
   gap: 0px 0px;
   width: 100%;
   height: 50px;
   align-items: center;
   justify-content: center;
-  padding: 1%;
-  @media ${mediaQueries.mobile} {
-    grid-template-columns: 18% 15% 15% 27% 25%;
-  }
-`;
-
-export const ExampleListItemContainer = styled(ListItemContainer)`
-  grid-template-columns: 20% 18% 18% 18% 18%;
-
+  padding: 3vh;
   @media ${mediaQueries.mobile} {
     grid-template-columns: 18% 15% 15% 27% 25%;
   }
@@ -46,7 +39,8 @@ export const Logo = styled.img`
   @media ${mediaQueries.mobile} {
     height: 23px;
     width: 23px;
-    margin-left:5px;  }
+    margin-left: 5px;
+  }
 `;
 
 export const Title = styled.text`
@@ -96,6 +90,30 @@ export const PriceVariationContainer = styled.div`
   flex-direction: row;
   flex: 1;
   justify-content: center;
+`;
+
+export const MoreInfoContainer = styled.div`
+  grid-area: more_info;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+`;
+
+export const MoreInfo = styled.img`
+  height: auto;
+  width: 2.5vw;
+  border-radius: 8px;
+  margin-left: 3px;
+  margin-right: 3px;
+  cursor: pointer;
+  @media ${mediaQueries.mobile} {
+    border-radius: 4px;
+    height: 25px;
+    width: 25px;
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+  }
 `;
 
 export const LinkContainer = styled.div`

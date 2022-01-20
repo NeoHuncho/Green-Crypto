@@ -1,4 +1,3 @@
-import React from "react";
 import headers_title from "constants/listHeaders";
 
 import {

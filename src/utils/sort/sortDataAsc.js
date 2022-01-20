@@ -1,4 +1,4 @@
-export default function (a, b) {
+export default function sort(a, b) {
   if (a.gCO2 < b.gCO2) {
     return -1;
   }

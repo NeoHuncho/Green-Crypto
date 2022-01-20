@@ -2,7 +2,7 @@ import styled from "styled-components";
 import mediaQueries from "constants/mediaQueries";
 import { ListItemContainer, Title } from "../Item/Item_Styles";
 export const Container = styled(ListItemContainer)`
-  grid-template-columns: 20% 18% 18% 18% 18%;
+  grid-template-columns: 18% 18% 18% 18% 18% 8%;
   padding: 0%;
   padding-top: 1%;
   @media ${mediaQueries.mobile} {

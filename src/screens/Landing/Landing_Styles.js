@@ -4,10 +4,10 @@ import mediaQueries from "constants/mediaQueries";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 10vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   @media ${mediaQueries.mobile} {
     padding-top: 3vh;
-    
   }
 `;
 
