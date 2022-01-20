@@ -1,14 +1,20 @@
 import styled from "styled-components";
 import mediaQueries from "constants/mediaQueries";
 import { ListItemContainer, Title } from "../Item/Item_Styles";
+import { black } from "colors/colors.js";
 export const Container = styled(ListItemContainer)`
-  grid-template-columns: 18% 18% 18% 18% 18% 8%;
   padding: 0%;
   padding-top: 1%;
   @media ${mediaQueries.mobile} {
-    grid-template-columns: 18% 15% 15% 27% 25%;
     height: 18px;
+    grid-template-columns: 18% 15% 15% 22% 18% 12%;
   }
+`;
+export const FixedContainer = styled(Container)`
+  position: fixed;
+  top: 0px;
+  background-color: ${black};
+  z-index: 100;
 `;
 
 export const TitleContainer = styled.div`

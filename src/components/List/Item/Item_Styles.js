@@ -14,7 +14,8 @@ export const ListItemContainer = styled.div`
   justify-content: center;
   padding: 3vh;
   @media ${mediaQueries.mobile} {
-    grid-template-columns: 18% 15% 15% 27% 25%;
+    grid-template-columns: 18% 15% 15% 22% 22% 8%;
+    padding: 1vh;
   }
 `;
 
@@ -109,10 +110,11 @@ export const MoreInfo = styled.img`
   cursor: pointer;
   @media ${mediaQueries.mobile} {
     border-radius: 4px;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     margin-left: 1.5px;
     margin-right: 1.5px;
+    padding-bottom: 5px;
   }
 `;
 
@@ -131,8 +133,8 @@ export const Link = styled.img`
   margin-right: 3px;
   @media ${mediaQueries.mobile} {
     border-radius: 4px;
-    height: 25px;
-    width: 25px;
+    height: 22px;
+    width: 22px;
     margin-left: 1.5px;
     margin-right: 1.5px;
   }

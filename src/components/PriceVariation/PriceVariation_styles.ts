@@ -10,7 +10,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   @media ${mediaQueries.mobile} {
-    max-width: 80px;
+    max-width: 70px;
   }
 `;
 export const Value = styled.div.attrs((props: { color: string }) => props)`
