@@ -31,6 +31,9 @@ export const Name = styled.h1`
   color: ${white};
   font-family: "Roboto";
   font-weight: 500;
+  @media ${mediaQueries.mobile} {
+    font-size: 6vw;
+  }
 `;
 
 export const SourcesContainer = styled.div`

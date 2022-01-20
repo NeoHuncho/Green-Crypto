@@ -7,7 +7,7 @@ export const Container = styled(ListItemContainer)`
   padding-top: 1%;
   @media ${mediaQueries.mobile} {
     height: 18px;
-    grid-template-columns: 18% 15% 15% 22% 18% 12%;
+    grid-template-columns: 18% 15% 15% 22% 20% 9%;
   }
 `;
 export const FixedContainer = styled(Container)`
