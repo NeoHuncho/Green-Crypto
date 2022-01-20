@@ -50,13 +50,13 @@ export const Title = styled.text`
   font-family: "Roboto";
   font-weight: 500;
   @media ${mediaQueries.mobile} {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 `;
 export const ExampleTitle = styled(Title)`
   font-size: 1.3vw;
   @media ${mediaQueries.mobile} {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
   }
 `;
 
@@ -67,7 +67,7 @@ export const Name = styled.text`
   font-weight: 300;
 
   @media ${mediaQueries.mobile} {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
   }
 `;
 
