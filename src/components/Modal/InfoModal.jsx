@@ -1,3 +1,5 @@
+import logEventAnalytics from "constants/analytics";
+import { useEffect } from "react";
 import {
   ModalContainer,
   TextLink,
@@ -9,6 +11,10 @@ import {
 } from "./Modal_styes";
 
 const InfoModal = ({ moreInfo, name, logo }) => {
+  useEffect(() => {
+    logEventAnalytics("modalView", name);
+  }, []);
+
   const sources = moreInfo.sources;
   return (
     <ModalContainer>
@@ -26,6 +32,12 @@ const InfoModal = ({ moreInfo, name, logo }) => {
               target="_blank"
               rel="noreferrer"
               href={sources.co2_emissions}
+              onClick={() =>
+                logEventAnalytics("sourceLinkClicked", {
+                  type: "co2_emissions",
+                  name: name,
+                })
+              }
             >
               <TextLink>CO2 Emissions</TextLink>{" "}
             </a>
@@ -36,6 +48,12 @@ const InfoModal = ({ moreInfo, name, logo }) => {
               target="_blank"
               rel="noreferrer"
               href={sources.official_website}
+              onClick={() =>
+                logEventAnalytics("sourceLinkClicked", {
+                  type: "website",
+                  name: name,
+                })
+              }
             >
               <TextLink>Official Website</TextLink>{" "}
             </a>
