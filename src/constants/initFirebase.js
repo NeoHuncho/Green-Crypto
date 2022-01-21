@@ -13,5 +13,5 @@ const app = initializeApp({
     "https://green-crypto-default-rtdb.europe-west1.firebasedatabase.app/",
 });
 const db = getDatabase(app);
-const analytics = getAnalytics(app);
+const analytics = getAnalytics();
 export { db, analytics };
