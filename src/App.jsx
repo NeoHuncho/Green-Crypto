@@ -9,12 +9,15 @@ import Landing from "screens/Landing/Landing.jsx";
 import { initListData } from "data/store/slices/list_slice.js";
 import { initCountryData } from "data/store/slices/country_slice.js";
 import SEO from "./SEO";
+import logEventAnalytics from "constants/analytics.js";
 const App = () => {
+
   const dispatch = useDispatch();
   const [data, setData] = useState(undefined);
   const [dispatched, setDispatched] = useState(false);
 
   useEffect(() => {
+    logEventAnalytics("page_before_load_view");
     const getData = async () => {
       disableScroll.on();
       const res = await fetchData();

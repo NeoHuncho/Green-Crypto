@@ -12,6 +12,7 @@ import { updateCO2Data } from "data/store/slices/list_slice";
 import sortDataAsc from "utils/sort/sortDataAsc";
 import { PlaceHolderContainer } from "App_Styles";
 import ListHeaderFixed from "components/List/Header/ListHeaderFixed";
+import logEventAnalytics from "constants/analytics";
 
 const List = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,9 @@ const List = () => {
   const list_data = Object.values(useSelector((state) => state.list.data));
   const country_data = useSelector((state) => state.country.data);
 
-  console.log(headerIsVisible);
+  useEffect(() => {
+    logEventAnalytics("page_after_load_view");
+  }, []);
   useEffect(() => {
     dispatch(updateCO2Data(country_data[country].gCO2_per_Wh));
     setInitialUpdate(true);

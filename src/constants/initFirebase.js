@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
+import { getAnalytics } from "firebase/analytics";
 const app = initializeApp({
   apiKey: "AIzaSyBC5Gj92opgTEuXYk8Bs1nEJn9Ldefx8Lc",
   authDomain: "green-crypto.firebaseapp.com",
@@ -12,4 +13,5 @@ const app = initializeApp({
     "https://green-crypto-default-rtdb.europe-west1.firebasedatabase.app/",
 });
 const db = getDatabase(app);
-export { db };
+const analytics = getAnalytics(app);
+export { db, analytics };
