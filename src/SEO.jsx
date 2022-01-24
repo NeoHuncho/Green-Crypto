@@ -5,6 +5,7 @@ import { black } from "./colors/colors";
 export default function SEO() {
   return (
     <Helmet>
+        <meta charset="utf-8" />
       <title>Green Crypto Ranking</title>
       <meta
         name="description"
