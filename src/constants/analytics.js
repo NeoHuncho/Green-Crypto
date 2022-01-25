@@ -6,6 +6,6 @@ const logEventAnalytics = (name, value) => {
   if (!value) logEvent(analytics, name);
   else logEvent(analytics, name, value);
 };
-logEvent(analytics, "notification_received");
+
 
 export default logEventAnalytics;
